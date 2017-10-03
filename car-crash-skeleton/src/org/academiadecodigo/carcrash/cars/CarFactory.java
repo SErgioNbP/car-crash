@@ -7,8 +7,10 @@ public class CarFactory {
 
     public static Car getNewCar(Position pos) {
 
-        return new Fiat(pos);
-
-
+        if ((int)Math.floor(Math.random() * 2) == 0){
+            return new Fiat(pos);
+        } else {
+            return new Mustang(pos);
+        }
     }
 }

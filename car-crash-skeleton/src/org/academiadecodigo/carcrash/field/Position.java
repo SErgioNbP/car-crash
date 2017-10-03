@@ -1,10 +1,9 @@
 package org.academiadecodigo.carcrash.field;
-
-
 public class Position {
 
     private int col;
     private int row;
+    private int speed = 2;
 
     public Position(int col, int row) {
         this.col = col;
@@ -12,31 +11,27 @@ public class Position {
     }
 
     public void moveLeft() {
-        if (col == 0) {
-            col = col;
+        if (col > 0) {
+            col -= speed;
         }
-        col -= 1;
     }
 
     public void moveRight() {
-        if (col == Field.width - 1) {
-            col -= 1;
+        if (col < Field.width - 1) {
+            col += speed;
         }
-        col += 1;
     }
 
     public void moveUp() {
-        if (row == 0) {
-            row += 1;
+        if (row > 0) {
+            row -= speed;
         }
-        row -= 1;
     }
 
     public void moveDown() {
-        if (row == Field.height - 1) {
-            row -= 1;
+        if (row < Field.height - 1) {
+            row += speed;
         }
-        row += 1;
     }
 
     public int getCol() {
@@ -47,11 +42,4 @@ public class Position {
         return row;
     }
 
-    public void setCol(int col) {
-        this.col = col;
-    }
-
-    public void setRow(int row) {
-        this.row = row;
-    }
 }

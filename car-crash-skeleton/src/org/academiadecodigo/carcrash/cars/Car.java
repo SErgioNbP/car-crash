@@ -10,9 +10,9 @@ abstract public class Car {
      */
     private Position pos;
     private boolean crashed;
-    private int speed;
     private Directions previousDirection;
     private Directions currentDirection;
+    private Position speed;
 
     public Car(Position pos) {
         this.pos = pos;

@@ -23,7 +23,6 @@ public class Game {
 
         Field.init(cols, rows);
         this.delay = delay;
-
     }
 
     /**
@@ -37,7 +36,6 @@ public class Game {
         }
 
         Field.draw(cars);
-
     }
 
     /**
@@ -58,11 +56,8 @@ public class Game {
             // Update screen
             Field.draw(cars);
 
-
         }
-
     }
-
 
     private void moveAllCars() {
         for (int i = 0; i < cars.length; i++) {
@@ -70,7 +65,6 @@ public class Game {
         }
 
         checkCollision();
-
     }
 
     private void checkCollision() {
@@ -87,6 +81,5 @@ public class Game {
                 }
             }
         }
-
     }
 }
